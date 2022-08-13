@@ -1,0 +1,111 @@
+@use "variables";
+@use "initial";
+@use "footer";
+
+.main-container {
+  margin-top: 101px;
+  width: 327px;
+  height: 677px;
+  background-color: variables.$Dark-desaturated-blue;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.section-picture {
+  background-image: url(../images/image-header-mobile.jpg);
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$Soft-violet-picture;
+  }
+}
+
+.section-text {
+  text-align: center;
+  &__title {
+    font-size: 1.86em;
+    font-family: variables.$Font-family;
+    color: variables.$White;
+    padding: 33px 32px 14px 30px;
+    span {
+      color: variables.$Soft-violet;
+    }
+  }
+  &__description {
+    font-size: 1em;
+    color: variables.$Slightly-transparent-white-p;
+    padding: 0 32px 34px 30px;
+    line-height: 20px;
+  }
+  &__stats {
+    line-height: 20px;
+    h3 {
+      font-family: variables.$Font-family;
+      color: variables.$Slightly-transparent-white-p;
+    }
+    .capital-letter {
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 0.6em;
+      font-weight: 400;
+      color: variables.$Slightly-transparent-white-h;
+      text-transform: uppercase;
+      padding-bottom: 17px;
+      letter-spacing: 1.7px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+  }
+  .section-picture {
+    background-image: url(../images/image-header-desktop.jpg);
+    width: 50%;
+    height: 100%;
+  }
+  .section-text {
+    // border: 1px solid blue;
+    padding-top: 60px;
+    padding-left: 18px;
+    width: 50%;
+    height: 100%;
+    &__title {
+      // border: 1px solid red;
+      font-size: 2em;
+      text-align: left;
+      margin-right: 90px;
+    }
+    &__description {
+      padding-top: 17px;
+      text-align: left;
+      margin-right: 60px;
+    }
+    &__stats {
+      // border: 1px solid green;
+      margin-left: 15px;
+      width: 54%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      h3 {
+        text-align: left;
+      }
+    }
+  }
+}

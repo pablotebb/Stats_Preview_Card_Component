@@ -1,0 +1,12 @@
+@use "variables";
+
+.attribution {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 0.93em;
+  text-align: center;
+  color: variables.$White;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
